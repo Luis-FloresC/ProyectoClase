@@ -14,4 +14,5 @@ router.get('/productos', (req, res)=>{
 router.get('/Usuario',controladorUsuario.ListaClientes);
 router.post('/Usuario',controladorUsuario.Guardar);
 router.delete('/Usuario',controladorUsuario.Eliminar);
+router.put('/Usuario',controladorUsuario.Modificar);
 module.exports=router;
