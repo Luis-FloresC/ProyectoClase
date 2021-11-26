@@ -36,6 +36,10 @@ const Clientes = db.define(
             type: sequelize.INTEGER,
             allowNull: false
         },
+        isActivo:{
+            type: sequelize.BOOLEAN,
+            allowNull: false
+        },
     },
     {
         tableName: "Clientes",
