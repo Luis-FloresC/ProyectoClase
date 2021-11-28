@@ -11,7 +11,7 @@ exports.ListaClientes = async (req, res) => {
    };
    //  res.json(ListarClientes);
 
-   res.render('Clientes', { ListarClientes });
+   res.render('Clientes', { ListarClientes ,title:"TechniFactory | Clientes"});
 };
 
 
@@ -23,6 +23,7 @@ exports.Guardar = async (req, res) => {
    if (!txtDni || !txtNombre || !txtApellido || !cmbGenero || !cmbFecha || !cmbEstado) {
       res.render('Clientes', {
          msg: "",
+         title:"TechniFactory | Clientes",
          error: "",
          advertencia:"Advertencia",
          mensaje:"Todos los campos son Obligatorio",
@@ -47,6 +48,7 @@ exports.Guardar = async (req, res) => {
          res.render('Clientes', {
             msg: "",
             error: "",
+            title:"TechniFactory | Clientes",
             advertencia:"Advertencia",
             mensaje:"El cliente ya existe",
             ListarClientes 
@@ -73,6 +75,7 @@ exports.Guardar = async (req, res) => {
                   msg: "Datos Correctos",
                   error: "",
                   advertencia:"",
+                  title:"TechniFactory | Clientes",
                   mensaje:info,
                   ListarClientes 
                });
@@ -84,6 +87,7 @@ exports.Guardar = async (req, res) => {
                   msg: "",
                   error: "Error",
                   advertencia:"",
+                  title:"TechniFactory | Clientes",
                   mensaje:info,
                   ListarClientes 
                });

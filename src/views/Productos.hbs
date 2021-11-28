@@ -15,7 +15,7 @@
         </div>
         {{/if}}
 
-         {{#if advertencia}}
+        {{#if advertencia}}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>Advertencia!</strong> {{mensaje}}.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -25,7 +25,7 @@
             <div class="card">
                 <br>
                 <div class="card-header">
-                    <h1 class="text-center">Clientes</h1>
+                    <h1 class="text-center">Productos</h1>
                 </div>
                 <div class="card-body">
                     <form class="needs-validation" method="post" novalidate>
@@ -33,31 +33,40 @@
                             <div class="row align-items-start">
                                 <div class="col">
                                     <div class="col-md-9 mb-3">
-                                        <label for="txtDni">DNI del Cliente</label>
-                                        <input type="text" class="form-control" name="txtDni"
-                                            placeholder="Ingrese su DNI" required>
+                                        <label for="txtNombreProducto">Nombre dek Producto</label>
+                                        <input type="text" class="form-control" name="txtNombreProducto"
+                                            placeholder="Ingrese el nombre del producto" required>
                                         <div class="valid-feedback">
                                             ¡Se ve bien!
+                                        </div>
+                                          <div class="invalid-feedback">
+                                            Campo Obligatorio
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="col-md-9 mb-3">
-                                        <label for="txtNombre">Nombre del Cliente</label>
-                                        <input type="text" class="form-control" name="txtNombre"
-                                            placeholder="Ingrese su nombre" required>
+                                        <label for="txtCantidad">Cantidad</label>
+                                        <input type="number" class="form-control" name="txtCantidad"
+                                            placeholder="Ingrese la cantidad" required>
                                         <div class="valid-feedback">
                                             ¡Se ve bien!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Campo Obligatorio
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="col-md-9 mb-3">
-                                        <label for="txtApellido">Apellido del Cliente</label>
-                                        <input type="text" class="form-control" name="txtApellido"
-                                            placeholder="Ingrese su apellido" required>
+                                        <label for="txtPrescioEst">Precio Estandar</label>
+                                        <input type="number" class="form-control" name="txtPrecioEst"
+                                            placeholder="Ingrese el precio Estandar" required>
                                         <div class="valid-feedback">
                                             ¡Se ve bien!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Campo Obligatorio
                                         </div>
                                     </div>
                                 </div>
@@ -65,22 +74,25 @@
                             <div class="row align-items-center">
                                 <div class="col">
                                     <div class="col-md-9 mb-3">
-                                        <label for="cmbGenero">Genero</label>
+                                        <label for="cmbCategoria">Categoria</label>
                                         <div class="input-group">
-                                            <select class="form-select" name="cmbGenero" id="cmbGenero">
-                                                <option value="Masculino">Masculino</option>
-                                                <option value="Femenino">Femenino</option>
+                                            <select class="form-select" name="cmbCategoria" id="cmbCategoria">
+                                                 {{#each ListarCategorias}}
+                                                <option value="{{this.dataValues.idCategoria}}">{{this.dataValues.descripcionCategoria}}</option>
+                                                {{/each}}
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="col-md-9 mb-3">
-                                        <label for="cmbFecha">Fecha de Nacimiento</label>
-                                        <input type="date" class="form-control" name="cmbFecha" placeholder="City"
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Proporcione una fecha válida.
+                                        <label for="cmbModelo">Modelo</label>
+                                        <div class="input-group">
+                                            <select class="form-select" name="cmbModelo" id="cmbModelo">
+                                                {{#each ListarModelos}}
+                                                <option value="{{this.dataValues.idModelo}}">{{this.dataValues.descripcionModelo}}</option>
+                                                {{/each}}
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -96,6 +108,37 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row align-items-center">
+                                 <div class="col">
+                                    <div class="col-md-11 mb-3">
+                                        <label for="txtPrescioVenta">Precio Venta</label>
+                                        <input type="number" class="form-control" name="txtPrecioVenta"
+                                            placeholder="Ingrese el precio de venta del producto" required>
+                                        <div class="valid-feedback">
+                                            ¡Se ve bien!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Campo Obligatorio
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row align-items-center">
+                                 <div class="col">
+                                    <div class="col-md-11 mb-3">
+                                        <label for="txtDescripcion">Descripción de Producto</label>
+                                       
+                                        <textarea name="txtDescripcion" id="txtDescripcion" placeholder="Escriba la descripcion del Producto" class="form-control" cols="5" rows="3"  required ></textarea>
+                                        <div class="valid-feedback">
+                                            ¡Se ve bien!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Campo Obligatorio
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <p class="text-center">
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                                 <button type="button" class="btn btn-secondary">Modificar</button>
@@ -112,32 +155,28 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Dni</th>
                                 <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Genero</th>
-                                <th>Fecha de Nacimiento</th>
+                                <th>Modelo</th>
+                                <th>Marca</th>
+                                <th>Categoria</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
                                 <th>Estado</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
 
-                            {{#each ListarClientes}}
+                            {{#each ListaProductos}}
                             <tr>
-                                <td scope="row">{{this.dataValues.idCliente}}</td>
-                                <td>{{this.dataValues.dni}}</td>
-                                <td>{{this.dataValues.nombreCliente}}</td>
-                                <td>{{this.dataValues.apellidoCliente}}</td>
-                                <td>{{this.dataValues.genero}}</td>
-                                <td>{{this.dataValues.fechaNacimiento}}</td>
-
-                                {{#if this.dataValues.isActivo}}
-                                <td><button type="button" class="btn btn-success">Habilitado</button></td>
-                                {{else}}
-                                <td><button type="button" class="btn btn-danger">Inhabilitado</button></td>
-                                {{/if}}
-
+                                <td scope="row">{{this.num}}</td>
+                                <td scope="row">{{this.nombre}}</td>                                
+                                <td scope="row">{{this.modelo}}</td>  
+                                <td scope="row">{{this.marca}}</td> 
+                                <td scope="row">{{this.categoria}}</td>   
+                                <td scope="row">{{this.cantidad}}</td>  
+                                <td scope="row">{{this.precio}}</td> 
+                                <td scope="row">{{this.estado}}</td>   
                                 <td>
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-warning">

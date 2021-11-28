@@ -13,7 +13,7 @@ exports.ListaUsuarios = async (req,res)=>
     //res.send("Hola");
     console.log(ListaDeUsuarios);
    //res.json(ListaDeUsuarios);
-    res.render('home');
+ //   res.render('home',{title: "TechnoFactory"});
 };
 
 
