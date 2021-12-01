@@ -5,98 +5,294 @@
 <html lang="es">
 
 <head>
-
-  <title>{{title}}</title>
+  <title>Inicio</title>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="Shortcut Icon" type="image/x-icon" href="/assets/icons/book.ico" />
+  <script src="/js/sweet-alert.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="/css/sweet-alert.css">
+  <link rel="stylesheet" href="/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="/js/modernizr.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/datatables/jquery.dataTables.min.css">
+  <link href="/datatables/buttons.dataTables.min.css" rel="stylesheet" />
+  <link href="/datatables/responsive.dataTables.min.css" rel="stylesheet" />
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"> </script>
+  <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="/js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="/datatables/jquery.dataTables.min.css">
+  <link href="/datatables/buttons.dataTables.min.css" rel="stylesheet" />
+  <link href="/datatables/responsive.dataTables.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/css/font-awesome.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/css/AdminLTE.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+  <!-- JavaScript -->
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+  <!-- Default theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+  <!-- Semantic UI theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+  <!-- 
+    RTL version
+-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css" />
+  <!-- Default theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.rtl.min.css" />
+  <!-- Semantic UI theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css" />
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css" />
 </head>
 
 <body>
-  <header class="container-fluido p-4  text-white" style="background-color: #08355E;">
-    <h1>Portales Web | Sistema LF</h1>
-    <p>Framework Css Utilizado en Aplicaciones front-end,es decir ,en la pantalla de interfaz en el usuario </p>
-  </header>
-
-  <nav class="navbar navbar-expand-lg navbar-dark  text-white" style="background-color: #0A4275;">
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/productos">Productos</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="./Clientes">Clientes</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Ventas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Empleados</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./login">Iniciar Sesión</a>
-      </li>
-
-    </ul>
-  </nav>
-  <br>
-  {{{body}}}
-  <br>
-  <a class="ir-arriba" javascript:void(0) title="Volver arriba">
-    <span class="fa-stack">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-    </span>
-  </a>
-
-  <section class="">
-
-    <!-- Footer -->
-    <footer class="text-center text-white" style="background-color: #0a4275;">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: CTA -->
-        <section class="">
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Luis Flores</span>
-            <button type="button" class="btn btn-outline-primary">
-              <a href="https://github.com/Luis-FloresC" target="_blank" class="nav-link text-white">Ver Perfil en GitHub!
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-              </svg>
-              </a>
-            </button>
-          </p>
-        </section>
-        <!-- Section: CTA -->
+  <div class="navbar-lateral full-reset">
+    <div class="visible-xs font-movile-menu mobile-menu-button"></div>
+    <div class="full-reset container-menu-movile custom-scroll-containers">
+      <div class="logo full-reset all-tittles">
+        <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button"
+          style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i>
+        Techno Factory
       </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2021 Copyright:
-        <a class="text-white" href="https://www.facebook.com/profile.php?id=100022355653916">Desarrollado por Luis
-          Flores.</a>
+      <div class="full-reset" style="background-color:#2B3D51; padding: 10px 0; color:#fff;">
+        <figure>
+          <img src="/assets/img/LT.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+        </figure>
+        <p class="text-center" style="padding-top: 15px;">Sistema de Ventas</p>
       </div>
-      <!-- Copyright -->
+      <div class="full-reset nav-lateral-list-menu">
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+          <li>
+            <div class="dropdown-menu-button"><i class="zmdi zmdi-money zmdi-hc-fw"></i>&nbsp;&nbsp; Ventas <i
+                class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i>&nbsp;&nbsp; Realizar Venta</a>
+              </li>
+              <li>
+                <a href="#"><i class="zmdi zmdi-view-list zmdi-hc-fw"></i>&nbsp;&nbsp; Lista De Productos<span
+                    class="label label-danger pull-right label-mhover">
+                    <?php  echo TotalRows("Productos"); ?>
+                  </span></a>
+              </li>
+              <li>
+                <a href="#"><i class="zmdi zmdi-view-list zmdi-hc-fw"></i>&nbsp;&nbsp; Lista De Ventas<span
+                    class="label label-danger pull-right label-mhover">
+                    <?php  echo TotalRows("Ventas"); ?>
+                  </span></a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="zmdi zmdi-desktop-mac zmdi-hc-fw"></i>&nbsp;&nbsp; Productos</a></li>
+
+          <li>
+            <div class="dropdown-menu-button"><i class="zmdi zmdi-folder-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Categorias
+              y más <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
+            <ul class="list-unstyled">
+              <!--  <li><a href="admin.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo administrador</a></li>-->
+              <li><a href="#"><i class="zmdi zmdi-view-module zmdi-hc-fw"></i>&nbsp;&nbsp; Modelos</a></li>
+              <li><a href="#"><i class="zmdi zmdi-adb zmdi-hc-fw"></i>&nbsp;&nbsp; Marcas</a></li>
+              <li><a href="#"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Categorias</a></li>
+              <li><a href="#"><i class="zmdi zmdi-account-circle zmdi-hc-fw"></i>&nbsp;&nbsp; Usuarios</a></li>
+            </ul>
+          </li>
+
+          <!--  <li><a href="admin.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo administrador</a></li>-->
+          <li><a href="#"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Clientes</a></li>
+
+
+
+
+          <!--  <li><a href="admin.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo administrador</a></li>-->
+          <li><a href="#"><i class="zmdi zmdi-account zmdi-hc-fw"></i>&nbsp;&nbsp;Empleados</a></li>
+
+
+
+
+
+          <!--  <li><a href="admin.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo administrador</a></li>-->
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+      <div class="content-page-container full-reset custom-scroll-containers">
+        <nav class="navbar-user-top full-reset">
+            <ul class="list-unstyled full-reset">
+                <figure>
+                   <img src="/assets/img/user01.png" alt="user-picture" class="img-responsive img-circle center-box">
+                </figure>
+                <li style="color:#fff; cursor:default;">
+                    <span class="all-tittles">Luis Flores</span>
+                </li>
+                <li  class="tooltips-general exit-system-button" onclick="Close()">
+                    <i class="zmdi zmdi-power"></i>
+                </li>
+               <!-- <li  class="tooltips-general search-book-button" data-href="" data-placement="bottom" title="Buscar Cliente">
+                    <i class="zmdi zmdi-search"></i>
+                </li>
+                <li  class="tooltips-general btn-help" data-placement="bottom" title="Ayuda">
+                    <i class="zmdi zmdi-help-outline zmdi-hc-fw"></i>
+                </li> -->
+                <li class="mobile-menu-button visible-xs" style="float: left !important;">
+                    <i class="zmdi zmdi-menu"></i>
+                </li>
+
+            </ul>
+        </nav>
+    <div class="container">
+      <div class="page-header">
+        <h1 class="all-tittles">Sistema de Ventas <small>Inicio</small></h1>
+      </div>
+    </div>
+    {{{body}}}
+    <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center all-tittles">ayuda del sistema</h4>
+          </div>
+          <div class="modal-body">
+            Este programa esta desarollado para calcular prestamos a largo y corto plazo.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> &nbsp;
+              De acuerdo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer full-reset">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h4 class="all-tittles">Acerca de</h4>
+            <p>
+              Esta diseñado para manejo de clientes y prestamos a largo y corto plazo.
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4 class="all-tittles">Desarrollador</h4>
+            <ul class="list-unstyled">
+              <li><i class="zmdi zmdi-check zmdi-hc-fw"></i>&nbsp; Luis Flores <a href="https://www.facebook.com/"><i
+                    class="zmdi zmdi-facebook zmdi-hc-fw footer-social"> </i></a><a href="https://twitter.com/home"><i
+                    class="zmdi zmdi-twitter zmdi-hc-fw footer-social"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright full-reset all-tittles">© 2020 Luis Flores</div>
     </footer>
-    <!-- Footer -->
-  </section>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
+  </div>
+
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap 3.3.5 -->
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/js/app.min.js"></script>
+
+  <!-- DATATABLES -->
+
+  <script src="/js/bootbox.min.js"></script>
+
+  <script src="/datatables/jquery.dataTables.min.js"></script>
+  <script src="/datatables/dataTables.buttons.min.js"></script>
+  <script src="/datatables/buttons.html5.min.js"></script>
+  <script src="/datatables/buttons.colVis.min.js"></script>
+  <script src="/datatables/jszip.min.js"></script>
+  <script src="/datatables/pdfmake.min.js"></script>
+  <script src="/datatables/vfs_fonts.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="/js/bootbox.min.js"></script>
+  <script src="/js/bootstrap-select.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#table').DataTable({
+        language: {
+          "decimal": "",
+          "emptyTable": "No hay datos",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+          "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+          "infoFiltered": "(Filtro de _MAX_ total registros)",
+          "infoPostFix": "",
+          "thousands": ",",
+          "lengthMenu": "Mostrar _MENU_ registros",
+          "loadingRecords": "Cargando...",
+          "processing": "Procesando...",
+          "search": "Buscar:",
+          "zeroRecords": "No se encontraron coincidencias",
+          "paginate": {
+            "first": "Primero",
+            "last": "Ultimo",
+            "next": "Siguiente",
+            "previous": "Anterior"
+          },
+          "aria": {
+            "sortAscending": ": Activar orden de columna ascendente",
+            "sortDescending": ": Activar orden de columna desendente"
+          }
+        }
+      });
+
+    });
+
+    function Close() {
+
+      bootbox.confirm({
+        message: "¿Seguro que desea salir del sistema?",
+        buttons: {
+          confirm: {
+            label: 'Yes',
+            className: 'btn-success'
+          },
+          cancel: {
+            label: 'No',
+            className: 'btn-danger'
+          }
+        },
+        callback: function (result) {
+          if (result) {
+
+            //    $(location).attr("href","../ajax/Usuario.php?op=salir");
+          }
+
+        }
+      });
+
+    }
+  </script>
+
+
+
 </body>
 
 </html>

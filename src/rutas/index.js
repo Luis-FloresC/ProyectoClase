@@ -43,7 +43,7 @@ router.get('/login', (req, res)=>{
 });
 
 router.get('/', (req, res)=>{
-    res.render('home' , {title:"TechnoFactory | Inicio"});
+    res.render('Menu' , {title:"TechnoFactory | Inicio"});
 });
 
 router.get('/productos',controladorProducto.ListarProductos);

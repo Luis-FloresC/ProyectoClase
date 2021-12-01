@@ -1,10 +1,10 @@
 const sequelize = require('sequelize');
 const db = new sequelize(
     'bd_techno_factory',
-    'luis',
+    'root',
     'luis1234',
     {
-        host: '192.168.100.21',
+        host: 'localhost',
         dialect: 'mysql',
         port: '3306'
     }
