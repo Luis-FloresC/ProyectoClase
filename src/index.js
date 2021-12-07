@@ -38,6 +38,8 @@ app.engine('.hbs', engine({
   app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', require('./rutas/index'));
+app.use('/Clientes',require('./rutas/rutasClientes'));
+app.use('/Productos',require('./rutas/rutasProductos'));
 
 app.listen(app.get('port'), () => {
   console.log('Servidor iniciado en el puerto: ', app.get('port'));

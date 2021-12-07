@@ -1,0 +1,117 @@
+<div class="container-fluid" style="margin: 50px 0;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <img src="/assets/img/LT.png" alt="user" class="img-responsive center-box" style="max-width: 110px;" />
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
+            Bienvenido a la sección para registrar un nuevo Producto. Para registrar el
+            nuevo producto debes de llenar todos los campos del siguiente
+            formulario.
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
+            <h3>{{mensaje.msj}}</h3>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="form">
+        <h1 class="title-flat-form title-flat-blue">Productos</h1>
+        <form autocomplete="off" action="../Productos/AccionesProducto" id="frmRegistrar" name="frmRegistrar" method="post">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <input type="text" name="id" id="id" />
+                    <br>
+                    <br>
+
+                    <div class="group-material">
+                        <input type="text" name="txtNombre" id="txtNombre" class="material-control tooltips-general"
+                            placeholder="Escribe aquí el nombre del producto" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}"
+                            required="" maxlength="50" data-toggle="tooltip" data-placement="top"
+                            title="Solamente se permiten letras" />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Nombre del Producto</label>
+                    </div>
+                    <div class="group-material">
+                        <input type="number" name="txtCantidad" id="txtCantidad"
+                            class="material-control tooltips-general"
+                            placeholder="Escribe aqui la cantidad de existencia" required="" maxlength="50"
+                            data-toggle="tooltip" data-placement="top" title="Solamente se permiten letras" />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Cantidad en existencia</label>
+                    </div>
+
+                    <div class="group-material">
+                        <span>Categorias</span>
+                        <select name="cmbCategoria"  class="material-control tooltips-general"
+                            data-toggle="tooltip" data-placement="top" title="Elige el cargo del empleado">
+                            {{#each ListarCategorias}}
+                            <option value="{{this.dataValues.idCategoria}}">{{this.dataValues.descripcionCategoria}}
+                            </option>
+                            {{/each}}
+
+                        </select>
+                    </div>
+                    <div class="group-material">
+                        <span>Estado</span>
+                        <select name="cmbEstado" id="cmbEstado" class="material-control tooltips-general"
+                            data-toggle="tooltip" data-placement="top" title="Elige el estado del cliente">
+                            <option value="1">Habilitado</option>
+                            <option value="2">Deshabilitado</option>
+                        </select>
+                    </div>
+                    <div class="group-material">
+                        <input type="text" class="material-control tooltips-general" name="txtPrecioE"
+                            placeholder="Escribe aquí el precio estandar del producto" pattern="[0-9.]{1,12}"
+                            required="" maxlength="10" data-toggle="tooltip" data-placement="top"
+                            title="Solamente se permiten números" />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Precio Estandar</label>
+                    </div>
+                    <div class="group-material">
+                        <input type="text" class="material-control tooltips-general" name="txtPrecioV"
+                            placeholder="Escribe aquí el precio venta del producto" pattern="[0-9.]{1,12}" required=""
+                            maxlength="10" data-toggle="tooltip" data-placement="top"
+                            title="Solamente se permiten números" />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Precio Venta</label>
+                    </div>
+                    <div class="group-material">
+                        <span>Modelos</span>
+                        <select name="cmbModelo" id="cmbModelo" class="material-control tooltips-general"
+                            data-toggle="tooltip" data-placement="top" title="Elige el cargo del empleado">
+                            {{#each ListarModelos}}
+                            <option value="{{this.dataValues.idModelo}}">{{this.dataValues.descripcionModelo}}</option>
+                            {{/each}}
+
+                        </select>
+                    </div>
+                     
+                    <div class="group-material">
+
+                         <span>Descripción</span>
+                        <textarea name="txtDescripcion" id="txtDescripcion"
+                            placeholder="Escriba la descripcion del Producto" class="material-control tooltips-general" cols="100" rows="5"
+                            required=""></textarea>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        
+
+                    </div>
+
+                    <p class="text-center">
+                        <button type="reset" class="btn btn-success" style="margin-right: 20px;"><i
+                                class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
+                        <button type="submit" name="btnAccion" id="btnAccion" value="guardar" class="btn btn-primary"><i
+                                class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                        &nbsp;&nbsp; &nbsp;&nbsp;
+
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
