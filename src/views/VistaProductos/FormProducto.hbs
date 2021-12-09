@@ -16,7 +16,8 @@
 <div class="container-fluid">
     <div class="form">
         <h1 class="title-flat-form title-flat-blue">Productos</h1>
-        <form autocomplete="off" action="../Productos/AccionesProducto" id="frmRegistrar" name="frmRegistrar" method="post">
+        <form autocomplete="off" action="../../Productos/AccionesProducto" id="frmRegistrar" name="frmRegistrar"
+            method="post">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                     <input type="text" name="id" id="id" />
@@ -25,9 +26,9 @@
 
                     <div class="group-material">
                         <input type="text" name="txtNombre" id="txtNombre" class="material-control tooltips-general"
-                            placeholder="Escribe aquí el nombre del producto" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}"
+                            placeholder="Escribe aquí el nombre del producto" 
                             required="" maxlength="50" data-toggle="tooltip" data-placement="top"
-                            title="Solamente se permiten letras" />
+                            title="Solamente se permiten letras y numeros" />
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Nombre del Producto</label>
@@ -44,8 +45,8 @@
 
                     <div class="group-material">
                         <span>Categorias</span>
-                        <select name="cmbCategoria"  class="material-control tooltips-general"
-                            data-toggle="tooltip" data-placement="top" title="Elige el cargo del empleado">
+                        <select name="cmbCategoria" class="material-control tooltips-general" data-toggle="tooltip"
+                            data-placement="top" title="Elige el cargo del empleado">
                             {{#each ListarCategorias}}
                             <option value="{{this.dataValues.idCategoria}}">{{this.dataValues.descripcionCategoria}}
                             </option>
@@ -62,7 +63,7 @@
                         </select>
                     </div>
                     <div class="group-material">
-                        <input type="text" class="material-control tooltips-general" name="txtPrecioE"
+                        <input type="text" class="material-control tooltips-general" name="txtPrecioE" id="txtPrecioE"
                             placeholder="Escribe aquí el precio estandar del producto" pattern="[0-9.]{1,12}"
                             required="" maxlength="10" data-toggle="tooltip" data-placement="top"
                             title="Solamente se permiten números" />
@@ -71,7 +72,7 @@
                         <label>Precio Estandar</label>
                     </div>
                     <div class="group-material">
-                        <input type="text" class="material-control tooltips-general" name="txtPrecioV"
+                        <input type="text" class="material-control tooltips-general" name="txtPrecioV" id="txtPrecioV"
                             placeholder="Escribe aquí el precio venta del producto" pattern="[0-9.]{1,12}" required=""
                             maxlength="10" data-toggle="tooltip" data-placement="top"
                             title="Solamente se permiten números" />
@@ -89,23 +90,23 @@
 
                         </select>
                     </div>
-                     
+
                     <div class="group-material">
 
-                         <span>Descripción</span>
+                        <span>Descripción</span>
                         <textarea name="txtDescripcion" id="txtDescripcion"
-                            placeholder="Escriba la descripcion del Producto" class="material-control tooltips-general" cols="100" rows="5"
-                            required=""></textarea>
+                            placeholder="Escriba la descripcion del Producto" class="material-control tooltips-general"
+                            cols="100" rows="5" required=""></textarea>
                         <span class="highlight"></span>
                         <span class="bar"></span>
-                        
+
 
                     </div>
 
                     <p class="text-center">
                         <button type="reset" class="btn btn-success" style="margin-right: 20px;"><i
                                 class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
-                        <button type="submit" name="btnAccion" id="btnAccion" value="guardar" class="btn btn-primary"><i
+                        <button type="submit" name="btnAccion" id="btnAccion" value="{{valor}}" class="btn btn-primary"><i
                                 class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
                         &nbsp;&nbsp; &nbsp;&nbsp;
 
@@ -114,4 +115,20 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript">
+
+
+    $('#id').val('{{BuscarProducto.dataValues.idProducto}}');
+    $('#txtNombre').val('{{BuscarProducto.dataValues.nombreProducto}}');
+    $('#txtDescripcion').val('{{BuscarProducto.dataValues.descripcionProducto}}');
+    $('#txtCantidad').val('{{BuscarProducto.dataValues.cantidadExistencia}}');
+    $('#cmbModelo').val('{{BuscarProducto.dataValues.idModelo}}');
+    $('#cmbCategoria').val('{{BuscarProducto.dataValues.idCategoria}}');
+    $('#cmbEstado').val('{{BuscarProducto.dataValues.idEstado}}');
+    $('#txtPrecioV').val('{{BuscarProducto.dataValues.precioVenta}}');
+    $('#txtPrecioE').val('{{BuscarProducto.dataValues.precioEstandar}}');
+
+
+</script>
 </div>
+
